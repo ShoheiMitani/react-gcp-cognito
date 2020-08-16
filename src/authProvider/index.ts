@@ -1,6 +1,6 @@
 import { Auth } from 'aws-amplify';
 
-const authProvider = {
+const AuthProvider = {
     login: (params: any) => Promise.resolve(), // Never called
     logout: (params: any) => {
         Auth.signOut();
@@ -11,4 +11,4 @@ const authProvider = {
     getPermissions: (params: any) => Promise.resolve(), // Never called
 };
 
-export default authProvider;
+export default AuthProvider;

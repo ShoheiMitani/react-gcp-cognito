@@ -15,6 +15,7 @@
     "aws-amplify-react": "^4.1.22",
     "prop-types": "^15.7.2",
     "ra-data-json-server": "^3.8.0",
+    "ra-data-simple-rest": "^3.7.1",
     "react": "^16.13.1",
     "react-admin": "^3.8.1",
     "react-dom": "^16.13.1",
