@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     width: '100%',
     overflow: 'hidden',
-    backgroundColor: '#FAF8F2',
+    backgroundColor: '#faf3dd',
     flexGrow: 1
   },
   appbar: {
