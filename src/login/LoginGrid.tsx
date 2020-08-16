@@ -10,13 +10,14 @@ import {
   Button
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 import { Auth } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: '85%'
+    maxWidth: '85%',
+    transform: 'translateY(-25%)'
   },
   avator: {
     borderRadius: '0%',

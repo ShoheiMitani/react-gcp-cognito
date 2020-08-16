@@ -4,25 +4,18 @@ import users from './users';
 import AuthProvider from './authProvider'
 import LoginPage from './login';
 import DataProvider from './dataProvider';
-import { createMuiTheme } from '@material-ui/core/styles';
+import Layout, { customeTheme } from './layout';
 
 import './App.css';
 
 const App: React.FC = () => {
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#1DD0B0"
-      }
-    }
-  });
-
   return (
     <Admin
-      theme={theme}
+      theme={customeTheme}
       dataProvider={DataProvider}
       loginPage={LoginPage}
       authProvider={AuthProvider}
+      layout={Layout}
     >
       <Resource name="users" {...users} />
     </Admin>

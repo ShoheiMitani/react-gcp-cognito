@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Amplify from 'aws-amplify';
 import awsConfiguration from '../awsConfiguration'
-import { MuiThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
-
+import { MuiThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { customeTheme } from '../layout';
 import LoginGrid from './LoginGrid';
 
 Amplify.configure({
@@ -29,29 +30,33 @@ const useStyles = makeStyles({
     position: 'absolute',
     width: '100%',
     overflow: 'hidden',
-    backgroundColor: '#F0EADA'
+    backgroundColor: '#FAF8F2',
+    flexGrow: 1
   },
+  appbar: {
+    alignItems: 'center',
+  },
+  toolbar: {
+    minHeight: '48px'
+  }
 });
 
 const LoginPage = () => {
-  const loginPageTheme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#1DD0B0"
-      }
-    },
-    typography: {
-      button: {
-        textTransform: "none"
-      }
-    },
-  });
-
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <MuiThemeProvider theme={loginPageTheme}>
+      <MuiThemeProvider theme={customeTheme}>
+      <AppBar position="static" className={classes.appbar}>
+        <Toolbar className={classes.toolbar}>
+          <Typography
+            variant="h6"
+            color="inherit"
+          >
+            Cognito Authentication With React Admin
+          </Typography>
+        </Toolbar>
+      </AppBar>
         <LoginGrid />
       </MuiThemeProvider>
     </div>
